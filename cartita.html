@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #0a0a0a; color: #e8e8e8; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 50px; width: 100%; max-width: 600px; }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; font-style: italic; }
+        hr { border: none; height: 1px; background-color: #222; width: 100%; max-width: 600px; }
+        .hr-top { margin-bottom: 30px; } .hr-bottom { margin-top: 30px; }
+        .editor-container { width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 20px; }
+        textarea#texto { width: 100%; min-height: 400px; background-color: #1a1a1a; border: 1px solid #333; color: #fff; font-family: 'Playfair Display', serif; font-size: 19px; font-style: italic; line-height: 1.9; padding: 30px; outline: none; }
+        .editor-container img { width: 100%; border: 1px solid #222; }
+        .menu { width: 100%; max-width: 600px; border: 1px solid #222; margin-top: 40px; }
+        .menu a { background-color: #0a0a0a; color: #e8e8e8; text-decoration: none; padding: 22px 28px; display: block; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; }
+        .menu a:hover { background-color: #fff; color: #000; padding-left: 36px; }
+    </style>
+</head>
+<body>
+    <div class="header"><hr class="hr-top" /><h1>cartita</h1><hr class="hr-bottom" /></div>
+    <div class="editor-container">
+        <textarea id="texto">Quisiera iniciar diciendo que eres una gran persona, te volviste muy importante para mí, a lo largo de mi tiempo a tu lado me hiciste ver las cosas diferente.
+
+Me hiciste ver que todavía hay personas con bonito corazón, personas a las que sí les importas y que ahí estarán por mucho que la distancia los separe.
+
+Simplemente tú eres una gran amiga, hija, simplemente una gran persona, y de verdad no sabes lo agradecida que estoy contigo, por estar siempre para mí, que te preocupes por mí, en serio no hay palabras que expresen lo agradecida y emocionada que estoy por tenerte en mi vida.
+
+Me han gustado todos los momentos que vivimos, como cuando solo nos mirábamos y sabía qué pensaba la otra, no importaba de qué habláramos, siempre estábamos a gusto.
+
+De verdad no hay palabras que describan lo que siento, se quedan cortas, pero quiero que sepas que llevas un gran lugar en mi corazón. ¡Te quiero muchote, mi Angy! 🍓🦆</textarea>
+        <img src="xd.jpg" alt="nosotras">
+        <img src="ambas.jpg">
+        <img src="angyy.jpg">
+    </div>
+    <nav class="menu"><a href="indiex.html">← Volver al inicio</a></nav>
+    <script>
+        const textarea = document.getElementById('texto');
+        const g = localStorage.getItem('CartitaTexto'); if(g) textarea.value = g;
+        textarea.addEventListener('input', () => localStorage.setItem('CartitaTexto', textarea.value));
+    </script>
+</body>
+</html>
