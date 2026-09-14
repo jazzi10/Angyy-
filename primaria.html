@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #0a0a0a; color: #e8e8e8; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 50px; width: 100%; max-width: 600px; }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; font-style: italic; }
+        .header p { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #666; margin-top: 10px; }
+        hr { border: none; height: 1px; background-color: #222; width: 100%; max-width: 600px; }
+        .hr-top { margin-bottom: 30px; } .hr-bottom { margin-top: 30px; }
+        .editor-container { width: 100%; max-width: 600px; }
+        textarea#texto {
+            width: 100%;
+            min-height: 380px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-style: italic;
+            line-height: 1.9;
+            padding: 30px;
+            outline: none;
+        }
+        textarea#texto::placeholder { color: #666; }
+        .menu { display: flex; flex-direction: column; width: 100%; max-width: 600px; border: 1px solid #222; margin-top: 40px; }
+        .menu a { background-color: #0a0a0a; color: #e8e8e8; text-decoration: none; padding: 22px 28px; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; }
+        .menu a:hover { background-color: #fff; color: #000; padding-left: 36px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <hr class="hr-top" />
+        <h1>primaria</h1>
+        <p>cuando me dijiste que me ibas a matar</p>
+        <hr class="hr-bottom" />
+    </div>
+
+    <div class="editor-container">
+        <textarea id="texto" placeholder="Escribe aquí...">En primaria...
+
+Cuando me dijiste que me ibas a matar, cuando nos peleábamos a cada rato y al final terminábamos riéndonos como si nada.
+
+Quién iba a pensar que esa niña que me caía mal a veces, iba a ser mi persona después...</textarea>
+    </div>
+
+    <nav class="menu">
+        <a href="indice.html">← Volver al inicio</a>
+    </nav>
+
+    <script>
+        const textarea = document.getElementById('texto');
+        const guardado = localStorage.getItem('primariaTexto');
+        if (guardado) { textarea.value = guardado; }
+        textarea.addEventListener('input', function() { localStorage.setItem('primariaTexto', this.value); });
+    </script>
+</body>
+</html>

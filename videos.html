@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #0a0a0a; color: #e8e8e8; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 50px; width: 100%; max-width: 600px; }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; font-style: italic; }
+        hr { border: none; height: 1px; background-color: #222; width: 100%; max-width: 600px; }
+        .hr-top { margin-bottom: 30px; } .hr-bottom { margin-top: 30px; }
+        .contenedor { width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 20px; }
+        video { width: 100%; border: 1px solid #222; background: #000; }
+        .descripcion { background-color: #1a1a1a; border: 1px solid #333; padding: 25px 30px; font-family: 'Playfair Display', serif; font-size: 18px; font-style: italic; line-height: 1.8; color: #ccc; }
+        .menu { width: 100%; max-width: 600px; border: 1px solid #222; margin-top: 40px; }
+        .menu a { background-color: #0a0a0a; color: #e8e8e8; text-decoration: none; padding: 22px 28px; display: block; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; }
+        .menu a:hover { background-color: #fff; color: #000; padding-left: 36px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <hr class="hr-top" />
+        <h1>videos</h1>
+        <hr class="hr-bottom" />
+    </div>
+
+    <div class="contenedor">
+        <video controls>
+            <source src="mewing.mp4" type="video/mp4">
+        </video>
+
+        <div class="descripcion">
+            Estábamos haciendo el mewing no se porque.
+        </div>
+        <video controls>
+            <source src="trend.mp4" type="video/mp4">
+        </video>
+
+        <div class="descripcion">
+            Estábamos el video de (hijos soy mamá y no han nacido por...)
+        </div>
+    </div>
+
+    <nav class="menu">
+        <a href="indice.html">← Volver al inicio</a>
+    </nav>
+</body>
+</html>
